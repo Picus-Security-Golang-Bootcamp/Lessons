@@ -1,0 +1,10 @@
+{
+  "name": "Mustafa",
+  "age": 21,
+  "isFemale": false,
+  "details": {
+    "firstKey": "firstValue",
+    "secondKey": "secondValue"
+  },
+  "test": 123
+}
