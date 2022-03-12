@@ -1,5 +1,5 @@
 ## Homework | Week 3
-`Not: Ödevi yeni bir repoya ekleyeceksiniz. Var olan reponuzda bir güncelleme olmayacak. `homework-2...` şeklinde yeni bir repo üzerinde çalışacaksınız.`
+`Not: Ödevi yeni bir repoya ekleyeceksiniz. Var olan reponuzda bir güncelleme olmayacak. "homework-2..." şeklinde yeni bir repo üzerinde çalışacaksınız.`
 
 
 Elimizde bir kitap listesi var. 
