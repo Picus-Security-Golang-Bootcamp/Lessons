@@ -1,0 +1,4 @@
+patika dev
+bootchamp
+golang is the best
+concurrency is easy

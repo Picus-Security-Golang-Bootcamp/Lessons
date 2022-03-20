@@ -38,5 +38,5 @@ func main() {
 		wg.Wait()
 	}
 
-	fmt.Println("yoo")
+	fmt.Println("test")
 }

@@ -1,0 +1,6 @@
+Country_ISO,Country_Name_EN,City_id,City_Name_EN,City_IATA,City_Latitude,City_Longitude
+GR,Greece,1,Athens,ATH,37.9838000000,23.7278000000
+ES,Spain,2,Cala Millor,NULL,39.6050000000,3.3867100000
+US,United States,49080,Leon Valley,NULL,29.4952,-98.6186
+SV,El Salvador,49081,Santa Ana,NULL,13.9942,-89.5597
+PH,Philippines,49082,Iloilo,ILO,10.720150,122.562103

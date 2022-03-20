@@ -1,0 +1,19 @@
+[
+  {
+    "countryCode": "TR",
+    "countryName": "Turkey",
+    "cityName": "Tekirdağ",
+    "iataCode": "",
+    "latitude": "12.49593",
+    "longitude": "54.93493"
+  },
+  {
+    "countryCode": "GR",
+    "countryName": "Greece",
+    "cityName": "Athens",
+    "iataCode": "ATH",
+    "latitude": "37.9838000000",
+    "longitude": "23.7278000000"
+  }
+]
+
