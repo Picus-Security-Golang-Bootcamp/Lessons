@@ -1,0 +1,29 @@
+ServerConfig:
+  AppVersion: 1.0.0
+  Mode: Development
+  RoutePrefix: /api/v1/patika-book-api
+  Debug: false
+  Port: 8080
+  TimeoutSecs: 60
+  ReadTimeoutSecs: 60
+  WriteTimeoutSecs: 12
+
+JWTConfig:
+  SessionTime: 3600
+  SecretKey: dummySecretKey
+
+DBConfig:
+  DataSourceName: postgres://postgres:yolcu360@localhost:5432/patika_book_store?sslmode=disable
+  Name: patika_book_store
+  MaxOpen: 50
+  MaxIdle: 50
+  MaxLifetime: 5
+  MigrationFolder: file://migrations
+
+
+
+Logger:
+  Development: true
+  Encoding: json
+  Level: info
+
