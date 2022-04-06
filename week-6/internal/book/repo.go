@@ -25,16 +25,15 @@ func (r *BookRepository) create(b *models.Book) (*models.Book, error) {
 	return b, nil
 }
 
-func (r *BookRepository) getAll() (*[]models.Book, error) {
+func (r *BookRepository) getAll(pageIndex, pageSize int) (*[]models.Book, int) {
 	zap.L().Debug("book.repo.getAll")
 
 	var bs = &[]models.Book{}
-	if err := r.db.Preload("Author").Find(&bs).Error; err != nil {
-		zap.L().Error("book.repo.getAll failed to get books", zap.Error(err))
-		return nil, err
-	}
+	var count int64
 
-	return bs, nil
+	r.db.Offset((pageIndex - 1) * pageSize).Limit(pageSize).Preload("Author").Find(&bs).Count(&count)
+
+	return bs, int(count)
 }
 
 func (r *BookRepository) getByID(id string) (*models.Book, error) {

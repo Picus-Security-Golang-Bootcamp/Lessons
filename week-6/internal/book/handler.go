@@ -8,6 +8,7 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/h4yfans/patika-bookstore/internal/api"
 	httpErr "github.com/h4yfans/patika-bookstore/internal/httpErrors"
+	pagination "github.com/h4yfans/patika-bookstore/pkg"
 )
 
 type bookHandler struct {
@@ -46,13 +47,14 @@ func (b *bookHandler) create(c *gin.Context) {
 }
 
 func (b *bookHandler) getAll(c *gin.Context) {
-	books, err := b.repo.getAll()
-	if err != nil {
-		c.JSON(httpErr.ErrorResponse(err))
-		return
-	}
+	pageIndex, pageSize := pagination.GetPaginationParametersFromRequest(c)
 
-	c.JSON(http.StatusOK, booksToResponse(books))
+	books, count := b.repo.getAll(pageIndex, pageSize)
+
+	paginatedResult := pagination.NewFromGinRequest(c, count)
+	paginatedResult.Items = booksToResponse(books)
+
+	c.JSON(http.StatusOK, paginatedResult)
 }
 
 func (b *bookHandler) getByID(c *gin.Context) {
