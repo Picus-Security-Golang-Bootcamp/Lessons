@@ -65,6 +65,7 @@ func (b *Basket) AddItem(sku string, price float64, quantity int) (*Item, error)
 	b.Items = append(b.Items, *item)
 	return item, nil
 }
+
 func (b *Basket) UpdateItem(itemId string, quantity int) (err error) {
 
 	if index, item := b.SearchItem(itemId); index != -1 {
