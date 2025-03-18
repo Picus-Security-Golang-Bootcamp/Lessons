@@ -1,4 +1,4 @@
-# Go Programming Course - 6 Month Curriculum
+# Go Programming Course - 6 Week Curriculum
 
 This repository contains the code and materials from a comprehensive 6-month Go programming course that I taught to students interested in learning the Go language. As the instructor, I designed a curriculum that progressed from basic programming concepts to advanced web application development, guiding students through hands-on exercises and projects.
 
